@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, Menu, Search } from 'lucide-react';
+import MobileNav from './MobileNav';
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="bg-purple-800 text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,10 +27,20 @@ const Header = () => {
             <Link to="/cart">
               <ShoppingBag className="w-5 h-5 cursor-pointer hover:text-purple-200 transition-colors" />
             </Link>
-            <Menu className="w-5 h-5 md:hidden cursor-pointer hover:text-purple-200 transition-colors" />
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="md:hidden"
+            >
+              <Menu className="w-5 h-5 cursor-pointer hover:text-purple-200 transition-colors" />
+            </button>
           </div>
         </div>
       </div>
+
+      <MobileNav 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+      />
     </header>
   );
 };

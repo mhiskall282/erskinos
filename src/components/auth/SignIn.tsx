@@ -1,3 +1,4 @@
+// src/components/auth/SignIn.tsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -6,16 +7,14 @@ import toast from 'react-hot-toast';
 import { isAdminUser } from '../../utils/auth';
 
 const SignIn = () => {
-  // Your existing SignIn logic and state
   const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
-    // Handle Google sign-in logic
+    // Your Google sign-in logic here
   };
 
   return (
     <div>
-      {/* Your sign-in form and other JSX */}
       <button
         onClick={handleGoogleSignIn}
         className="mt-4 w-full flex items-center justify-center gap-2 border border-gray-300 p-2 rounded-lg hover:bg-gray-50 transition-colors"
@@ -27,4 +26,5 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;  // Ensure it's the default export
+// Default export of SignIn component
+export default SignIn;

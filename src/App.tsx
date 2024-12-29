@@ -10,8 +10,6 @@ import Cart from './components/shop/Cart';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-
-import SignUp from './components/auth/SignUp';
 import AdminDashboard from './components/admin/AdminDashboard';
 
 function App() {
@@ -33,7 +31,6 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/signup" element={<SignUp />} />
                 <Route path="/admin" element={<AdminDashboard />} />
               </Routes>
             </main>

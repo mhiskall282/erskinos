@@ -13,3 +13,4 @@ import { isAdminUser } from '../../utils/auth';
               <Chrome className="w-5 h-5" /> {/* Changed from Google to Chrome */}
               <span>Sign in with Google</span>
             </button>
+export default SignIn;

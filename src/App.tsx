@@ -10,7 +10,7 @@ import Cart from './components/shop/Cart';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-//import SignIn from './components/auth/SignIn';
+import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import AdminDashboard from './components/admin/AdminDashboard';
 
